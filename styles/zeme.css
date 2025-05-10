@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,500&display=swap');
+
+/*Úvodní stránka*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    background-color: rgb(1, 11, 20);
+    transition: background-color 0.5s ease;
+    border-bottom: 1px solid rgba(190, 190, 190, 0.2);
+    transition: 0.5s ease;
+}
+
+header .logo{
+    width: 160px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+header .nav{
+    position: relative;
+}
+
+header .nav .nav-items a{
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .nav .nav-items a:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .nav .nav-items a.active{
+    color: #008af5;
+}
+
+header .nav .nav-items a:hover:before{
+    background-color: #fff;
+    width: 100%;
+    background: #008af5;
+    box-shadow: 0 0 10px #8cccfd, 0 0 40px #008af5, 
+    0 0 10px #008af5;
+    transition: 0.4s;
+}
+
+header .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .user-info {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+header .user-info a {
+    color: #008af5;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+header .user-info a:hover {
+    color: #ff3c3c;
+}
+
+main {
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background: linear-gradient(90deg, rgba(0,61,107,1) 0%, rgba(0,105,185,1) 100%);
+}
+
+.country-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: white;
+  }
+  
+  .favorite-star {
+    font-size: 1.5rem;
+    color: gold;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .favorite-star:hover {
+    transform: scale(1.1);
+    color: orange;
+}
+
+.favorite-star.filled {
+    color: gold;
+}
+
+.favorite-star.empty {
+    color: white;
+}
+
+.destination-image {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin: 100px auto 20px;
+    border-radius: 8px;
+    transition: 0.4s ease-in;
+}
+
+.destination-image:hover{
+    filter: brightness(1.1);
+    transition: 0.4s ease-in;
+}
+
+/* Sekce základních informací */
+.basic-info, .description, .highlights, .activities {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.basic-info ul, .highlights ul, .activities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.basic-info ul li, .highlights ul li, .activities ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.basic-info ul li:last-child, .highlights ul li:last-child, .activities ul li:last-child {
+    border-bottom: none;
+}
+
+.basic-info h2, .description h2, .highlights h2, .activities h2 {
+    margin-bottom: 15px;
+    color: #008af5;
+}
+
+/* Tlačítko zpět */
+.back-button{
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 315px;
+    background: #008af5;
+    padding: 15px 35px;
+    color: #fff;
+    box-shadow: 0 0 0 #8eceff, 0 0 5px #008af5, 
+    0 0 0 #008af5;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.back-button:hover{
+    color: #008af5;
+    background: #fff;
+    box-shadow: 0 0 5px #abdbff, 0 0 20px #78c4ff, 
+    0 0 5px #6dc0ff;
+}
+
+.reviews {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reviews h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #012c3a;
+    text-align: center;
+}
+
+.reviews p {
+    font-size: 1em;
+    color: #444;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.review-item {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.review-item strong {
+    color: #008af5;
+    font-size: 1.1em;
+}
+
+.review-item p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.review-item small {
+    display: block;
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.review-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 138, 245, 0.15);
+    margin-top: 40px;
+}
+
+.review-form h3 {
+    margin-bottom: 20px;
+    color: #012c3a;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #012c3a;
+}
+
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    resize: vertical;
+}
+
+.review-form button {
+    background-color: #008af5;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.review-form button:hover {
+    background-color: #0072c4;
+}
+
+footer{
+    background: rgb(1, 11, 20);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 10px 30px 10px;
+}
+
+.footerSocialMediaIcons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+.footerSocialMediaIcons a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.footerSocialMediaIcons a i{
+    font-size: 1.2em;
+    color: #110114;
+}
+
+.footerSocialMediaIcons a:hover{
+    background-color: #010b14;
+    transition: 0.5s ease;
+}
+
+.footerSocialMediaIcons a:hover i{
+    color: white;
+}
+
+.footerNavbar{
+    margin-bottom: 5px;
+}
+
+.footerNavbar ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNavbar ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+
+.footerNavbar ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    padding: 12px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.footerBottom p{
+    color: white;
+}
+
+@keyframes slideRight{
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1233px){
+    main{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 1233px){
+    header {
+        padding: 12px 20px;
+    }
+
+    section {
+        padding: 10px 100px;
+    }
+
+    .destination-image {
+        max-width: 70%;
+    }
+    
+    .destination-image:hover{
+        max-width: 71%;
+    }
+
+    header .nav {
+        display: none;
+    }
+
+    header .nav.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .nav .nav-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    header .nav .nav-items a::before{
+        background: #222;
+        height: 5px;
+
+    }
+
+    header .nav.active .nav-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+
+    .menu-btn{
+        background: url(../img/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active{
+        z-index: 999;
+        background: url(../img/close.png)no-repeat;
+        background-size:  25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+
+    header .user-info {
+        margin-top: 25px;
+        padding-left: 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #222;
+        font-size: 1.1em;
+        gap: 5px;
+    }
+    
+    header .user-info a {
+        color: #ff3c3c;
+        font-size: 0.95em;
+        text-decoration: underline;
+    } 
+}
+
+@media (max-width: 770px){
+    .destination-detail h1{
+        font-size: 2.3em;
+    }  
+
+    .destination-detail{
+        transform: scale(0.9);
+    }
+
+    section {
+        margin-top: -80px;
+        padding: 10px 75px;
+    }
+
+    .destination-image {
+        max-width: 85%;
+    }
+    
+    .destination-image:hover{
+        max-width: 86%;
+    }
+
+    .back-button{
+        transform: scale(0.9);
+        margin: 30px auto;
+        margin-top: -55px;
+    }
+
+    .footerNavbar ul{
+        flex-direction: column;
+    }
+
+    .footerNavbar ul li{
+        width: 100%;
+        text-align: center;
+        margin: 5px;
+    }    
+}
+
+@media (max-width: 560px){
+    section {
+        margin-top: -180px;
+        padding: 100px 40px;
+    }
+
+    .destination-image {
+        max-width: 100%;
+    }
+    
+    .destination-image:hover{
+        max-width: 100%;
+    }
+
+    .back-button{
+        transform: scale(0.8);
+        margin-top: -145px;
+    }
+}
+
+@media (max-width: 450px){
+    .destination-detail h1{
+        font-size: 2em;
+    }
+
+    section {
+        margin-top: -80px;
+        padding: 10px 25px;
+    }
+
+    .back-button{
+        margin-top: -60px;
+    }
+}
+
+@media (max-width: 375px){
+    section {
+        margin-top: -80px;
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 345px){
+    section {
+        margin-top: -190px;
+        padding: 100px 22px;
+    }
+
+    .back-button{
+        transform: scale(0.75);
+        margin-top: -160px;
+    }
+}
+
+@media (max-width: 335px){
+    .destination-detail h1{
+        font-size: 1.8em;
+    } 
+
+    section {
+        padding: 100px 30px;
+    }
+
+    .home .content h1 {
+        font-size: 2.3em;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 325px){
+    section {
+        padding: 100px 20px;
+    }
+
+    .home .content h1 {
+        font-size: 2.3em;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .home .content a{
+        padding: 15px 25px;
+        font-size: 0.9em;
+    }
+}
+
+/* Responzivní úpravy recenzí */
+@media (max-width: 768px) {
+    .reviews {
+        padding: 30px 15px;
+    }
+
+    .review-item {
+        padding: 15px;
+        font-size: 0.95em;
+    }
+
+    .review-item strong {
+        font-size: 1em;
+    }
+
+    .review-item small {
+        font-size: 0.75em;
+    }
+
+    .reviews h2 {
+        font-size: 1.4em;
+    }
+
+    .reviews p {
+        font-size: 0.95em;
+    }
+
+    .review-form label,
+    .review-form select,
+    .review-form textarea,
+    .review-form button {
+        font-size: 0.9em;
+    }
+
+    .review-form textarea {
+        min-height: 100px;
+    }
+
+    .review-form button {
+        padding: 8px 14px;
+    }
+}
