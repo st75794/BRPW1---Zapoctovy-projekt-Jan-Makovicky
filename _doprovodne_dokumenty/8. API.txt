@@ -1,0 +1,119 @@
+[
+  {
+    "method": "POST",
+    "endpoint": "/api/login",
+    "description": "Přihlášení uživatele pomocí e-mailu a hesla",
+    "request": {
+      "email": "string",
+      "password": "string"
+    },
+    "response": {
+      "user_id": "int",
+      "username": "string",
+      "is_admin": "bool"
+    }
+  },
+
+  {
+    "method": "POST",
+    "endpoint": "/api/register",
+    "description": "Registrace nového uživatele",
+    "request": {
+      "username": "string",
+      "email": "string",
+      "password": "string"
+    },
+    "response": {
+      "message": "Uživatel byl úěšně registrován"
+    }
+  },
+
+  {
+    "method": "GET",
+    "endpoint": "/api/destinations",
+    "description": "Získání všech dostupných destinací",
+    "response": [
+      {
+        "id": "int",
+        "name": "string",
+        "country": "string",
+        "image_url": "string"
+      }
+    ]
+  },
+
+  {
+    "method": "POST",
+    "endpoint": "/api/favorites/add",
+    "description": "Přidání destinace do oblíbených",
+    "request": {
+      "user_id": "int",
+      "destination_id": "int"
+    },
+    "response": {
+      "message": "Destinace byla přidána do oblíbených"
+    }
+  },
+
+  {
+    "method": "POST",
+    "endpoint": "/api/favorites/remove",
+    "description": "Odebrání destinace z oblíbených",
+    "request": {
+      "user_id": "int",
+      "destination_id": "int"
+    },
+    "response": {
+      "message": "Destinace byla odebrána z oblíbených"
+    }
+  },
+
+  {
+    "method": "GET",
+    "endpoint": "/api/recommendations",
+    "description": "Získání doporučených destinací podle kategorií oblíbených",
+    "request": {
+      "user_id": "int"
+    },
+    "response": [
+      {
+        "id": "int",
+        "name": "string",
+        "category": "string",
+        "image_url": "string"
+      }
+    ]
+  },
+
+  {
+    "method": "POST",
+    "endpoint": "/api/reviews/add",
+    "description": "Přidání recenze a hodnocení k destinaci",
+    "request": {
+      "user_id": "int",
+      "destination_id": "int",
+      "rating": "int",
+      "review": "string"
+    },
+    "response": {
+      "message": "Recenze byla úěšně přidána"
+    }
+  },
+
+  {
+    "method": "GET",
+    "endpoint": "/api/reviews",
+    "description": "Získání recenzí pro danou destinaci",
+    "request": {
+      "destination_id": "int"
+    },
+    "response": [
+      {
+        "username": "string",
+        "rating": "int",
+        "review": "string",
+        "created_at": "datetime"
+      }
+    ]
+  }
+]

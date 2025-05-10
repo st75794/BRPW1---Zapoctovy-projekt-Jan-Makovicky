@@ -1,0 +1,7 @@
+JOURNEYO je webová aplikace zaměřená na cestování, která uživatelům umožňuje objevovat a ukládat oblíbené destinace, číst a psát recenze a získávat doporučení na základě svých preferencí. Cílem webu je inspirovat návštěvníky k novým cestovatelským zážitkům a zároveň jim nabídnout personalizovaný zážitek díky inteligentnímu doporučovacímu systému.
+
+Projekt je určen pro běžné uživatele se zájmem o cestování, kteří si chtějí vytvořit vlastní seznam oblíbených míst, hodnotit destinace a sdílet zkušenosti. Uživatelé si mohou založit účet, přihlásit se, prohlížet informace o zemích, přidávat destinace mezi oblíbené jedním kliknutím na hvězdičku a psát recenze s bodovým hodnocením.
+
+Na pozadí běží robustní PHP backend s databází MySQL, která spravuje informace o uživatelích, destinacích a recenzích. Admin sekce umožňuje spravovat veškerý obsah – destinace, recenze i uživatele.
+
+JOURNEYO tak slouží jako jednoduchý, přehledný a uživatelsky přívětivý nástroj pro plánování cest a sdílení zkušeností s komunitou.
